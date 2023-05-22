@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar.astro'
 import Containers from '../components/containers.astro';
 const allPosts = await Astro.glob('../pages/posts/*.mdx');
 ---
-<body>
+<body class="bg-green-200 h-screen">
     <Navbar/>
     <h1 class="text-5xl text-center pt-5 pb-5">Blog</h1>
     {allPosts.map((post)=><a href={post.url}><Containers Title={post.frontmatter.title} Desc={post.frontmatter.description}/></a>)}
