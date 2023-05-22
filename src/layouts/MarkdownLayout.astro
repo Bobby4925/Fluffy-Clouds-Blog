@@ -1,0 +1,9 @@
+---
+ const { frontmatter } = Astro.props;
+ import Navbar from '../components/Navbar.astro'
+---
+<Navbar />
+<h1 class="text-5xl text-center pt-5">{frontmatter.title}</h1>
+<h2 class="text-center pt-5 text-xl">Written by {frontmatter.author}</p>
+<h3 class="text-center pt-3 pb-5">Published on {frontmatter.pubDate}</h3>
+<slot />
